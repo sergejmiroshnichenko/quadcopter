@@ -1,0 +1,94 @@
+{
+  "quadcopter": [
+    {
+      "name": "Drone Global GD89 FullHD",
+      "price": 2579,
+      "srs": "https://content.rozetka.com.ua/goods/images/big/185230762.jpg",
+      "code": "303371038",
+      "color": "black",
+      "isFavourite" : true,
+      "isinCart" : false
+    },
+    {
+      "name": "Drone 4DRC F3 FullHD",
+      "price": 2899,
+      "srs": "https://content.rozetka.com.ua/goods/images/big/239899152.jpg",
+      "code": "306682678",
+      "color": "grey",
+      "isFavourite" : false,
+      "isinCart" : false
+    },
+    {
+      "name": "Drone ZLRC SG108 Pro - 4K",
+      "price": 5145,
+      "srs": "https://content.rozetka.com.ua/goods/images/big/231264889.jpg",
+      "code": "323537392",
+      "color": "orange",
+      "isFavourite" : false,
+      "isinCart" : false
+    },
+    {
+      "name": "Drone JJRC 8811 Pro",
+      "price": 5850,
+      "srs": "https://content2.rozetka.com.ua/goods/images/big/225237738.jpg",
+      "code": "277099468",
+      "color": "black",
+      "isFavourite" : false,
+      "isinCart" : false
+    },
+    {
+      "name": "Drone KF101 / Visuo Zen K3",
+      "price": 6169,
+      "srs": "https://content1.rozetka.com.ua/goods/images/big/218749252.jpg",
+      "code": "317364013",
+      "color": "black",
+      "isFavourite" : false,
+      "isinCart" : false
+    },
+    {
+      "name": "Drone 4DRC F4 - 4K и HD",
+      "price": 6295,
+      "srs": "https://content2.rozetka.com.ua/goods/images/big/193122483.jpg",
+      "code": "267819396",
+      "color": "grey",
+      "isFavourite" : false,
+      "isinCart" : false
+    },
+    {
+      "name": "Drone 4DRC F4 GPS 4К",
+      "price": 5890,
+      "srs": "https://content1.rozetka.com.ua/goods/images/big/225237743.jpg",
+      "code": "277099503",
+      "color": "grey",
+      "isFavourite" : false,
+      "isinCart" : false
+    },
+    {
+      "name": "Drone Visuo s816 BLZ (Blitz)",
+      "price": 2145,
+      "srs": "https://content1.rozetka.com.ua/goods/images/big/17308715.jpg",
+      "code": "124589713",
+      "color": "grey",
+      "isFavourite" : false,
+      "isinCart" : false
+    },
+    {
+      "name": "Drone SJR F3 с 4К и Full HD",
+      "price": 3450,
+      "srs": "https://content1.rozetka.com.ua/goods/images/big/161552320.jpg",
+      "code": "280851093",
+      "color": "white",
+      "isFavourite" : false,
+      "isinCart" : false
+    },
+    {
+      "name": "Drone GD89 PRO + кейс",
+      "price": 3199,
+      "srs": "https://content2.rozetka.com.ua/goods/images/big/159886117.jpg",
+      "code": "279003533",
+      "color": "black",
+      "isFavourite" : false,
+      "isinCart" : false
+    }
+  ]
+}
