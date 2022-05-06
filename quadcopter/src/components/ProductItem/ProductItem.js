@@ -1,4 +1,4 @@
-import './ProductItem.css'
+import styles from './ProductItem.module.scss'
 import { ReactComponent as StarIcon } from "../../assets/star_icon.svg";
 import { ReactComponent as StarFavourite } from "../../assets/star_favourite.svg";
 import { ReactComponent as Cart } from "../../assets/cart.svg";
@@ -32,26 +32,22 @@ const ProductItem = ({ name, price, srs, code, color, addToCart }) => {
 
     return (
 
-        <div className='product-flex'>
+        <div className={styles.productFlex}>
 
             {modal && <Modal name={name} price={price} closeModal={closeModal} addToCart={addToCart} />}
-            <div onClick={drawFavourite} className="star-icon">
-                {isFavourite ? <StarIcon /> : <StarFavourite className="star" />}
+
+            <div onClick={drawFavourite} className={styles.starIcon}>
+                {isFavourite ? <StarIcon /> : <StarFavourite className={styles.star} />}
             </div>
 
-            <img src={srs} alt="picture" width={200} height={200} />
-            <p className='class-name'>{name}</p>
+            <img src={srs} alt="pic" width={200} height={200} />
+            <p className={styles.className}>{name}</p>
             <span>{code}</span>
             <span>{color}</span>
-            <p className='price'>{price} ₴ </p>
+            <p className={styles.price}>{price} ₴ </p>
 
             <div>
-                <Button variant="outline-warning" onClick={() => {
-                    openModal();
-                }} >
-                    <Cart className="cart" />
-                    Add to cart
-                </Button>
+                <Button variant="outline-warning" onClick={() => openModal()}> <Cart className={styles.cart} /> Add to cart </Button>
             </div>
         </div>
 

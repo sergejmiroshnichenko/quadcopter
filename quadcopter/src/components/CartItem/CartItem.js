@@ -1,6 +1,5 @@
 const CartItem = ({ name, count }) => {
 
-    // console.log('name:',name, 'count:',count)
     return(
         <div>
             <div>

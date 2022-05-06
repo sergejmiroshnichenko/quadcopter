@@ -1,0 +1,42 @@
+.productFlex {
+    display: flex;
+    padding: 30px;
+    border: 1px solid burlywood;
+    flex-direction: column;
+
+    .starIcon {
+        text-align: end;
+        cursor: pointer;
+        width: 2em;
+        height: 2em;
+        padding-left: 90%;
+
+        &:hover path {
+            color: #FAC917;
+        }
+
+        .star{
+            padding-right: 20px;
+        }
+    }
+
+    .className {
+        font-weight: 700;
+        margin-top: 25px;
+    }
+
+    .price {
+        font-weight: 700;
+        font-size: 26px;
+        color: red;
+    }
+
+    div{
+        .cart {
+            margin-right: 10px;
+            margin-bottom: 4px;
+        }
+    }
+}
+
+

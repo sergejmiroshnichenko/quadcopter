@@ -1,9 +1,7 @@
-import './App.css';
+import styles from './App.module.scss';
 import {useState, useEffect} from "react";
 import Products from "./components/Products/Products";
 import Cart from "./components/Cart/Cart";
-
-
 
 
 
@@ -39,7 +37,7 @@ function App() {
 
 
     const addToCart = (name, price) => {
-        // console.log('name:', name, 'price:', price)
+
         setCartItem((prev) => {
             const index = prev.findIndex(item => item.name === name);
             if (index === -1) {
@@ -53,8 +51,8 @@ function App() {
     }
 
     return (
-        <div className="App">
-            <header className="App-header">
+        <div className={styles.App}>
+            <header>
                 <Cart quadcopter={cartItem}/>
                 <Products  data={quadcopter} addToCart={addToCart} />
             </header>

@@ -12,34 +12,19 @@
 .content{
     background-color:white;
     border:#FAC917 solid 5px;
-    height: 250px;
-    width: 450px;
+    height: 270px;
+    width: 420px;
     margin:0 auto;
     border-radius: 15px;
     transform: translateY(75%);
 }
 
 .buttonBlock{
-    margin-top: 56px;
+    margin-top: 144px;
     display: flex;
     justify-content: end;
     height: 65px;
     background: bisque;
-}
-
-.btnModal{
-    border: 1px solid black;
-    cursor: pointer;
-    width: 60px;
-    height: 35px;
-}
-
-.buttonX{
-    width: 20px;
-    margin-left: 210px;
-    cursor: pointer;
-    padding: 1px;
-    margin-top: 10px;
 }
 
 .modalTitle{
@@ -50,31 +35,46 @@
 .bi.bi-x{
     position: absolute;
     top: 3%;
-    right: 2.25%;
+    right: 0.6%;
     cursor: pointer;
 }
 
 .btn.btn-success{
     position: absolute;
     right: 25%;
-    top: 79%;
+    top: 81%;
     width: 60px;
 }
 
 .btn.btn-danger{
     position: absolute;
-    top: 79%;
+    top: 81%;
     right: 3%;
 }
 
 h3{
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 10px;
-    margin-right: 52%;
+    margin-right: 50%;
+    color: red
 }
 
 .modalQuestion{
     margin-top: 38px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
 }
+
+.modalAnswer{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.block{
+    width: 410px;
+    height: 145px;
+    background:white;
+    position: absolute;
+    border: grey solid 1px;
+}
+

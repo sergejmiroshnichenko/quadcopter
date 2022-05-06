@@ -1,11 +1,11 @@
 import ProductItem from '../ProductItem/ProductItem';
-import './Products.css'
+import styles from './Products.module.scss'
 
 
 const Products = ({ data, addToCart }) => {
 
     return (
-        <ul className="wrapper">
+        <ul className={styles.wrapper}>
             { data && data.map( item => <ProductItem key={item.code} {...item} addToCart={addToCart} />)}
         </ul>
     )
