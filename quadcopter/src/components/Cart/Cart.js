@@ -1,19 +1,27 @@
 import CartItem from '../CartItem/CartItem'
 import styles from './Cart.module.scss'
+import PropTypes from 'prop-types'
 
 
+const Cart = ({quadcopter}) => {
 
-const Cart = ({ quadcopter }) => {
-    return(
+    return (
         <div>
             <h2>Cart</h2>
-            <div>
+            <>
                 {quadcopter && quadcopter.map(item => <CartItem {...item}/>)}
-            </div>
-            <p className={styles.total}> { quadcopter.length > 0 ? 'Total: ' + quadcopter.reduce((acc, item) => (acc += item.price * item.count, acc), 0) + ' ₴' : 'Price : 0' + ' ₴' }</p>
+            </>
+            <p className={styles.total}> {quadcopter.length > 0 ? 'Total: ' + quadcopter.reduce((acc, item) => (acc += item.price * item.count, acc), 0) + ' ₴' : 'Price : 0' + ' ₴'}</p>
 
         </div>
     )
+};
+
+
+Cart.propTypes = {
+    quadcopter: PropTypes.array
 }
+
+
 
 export default Cart;

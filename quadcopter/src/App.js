@@ -5,24 +5,29 @@ import Cart from "./components/Cart/Cart";
 
 
 
-function App() {
+const App = () => {
 
     const [quadcopter, setQuadcopter] = useState([]);
     const [cartItem, setCartItem] = useState([]);
+    const [loading, setLoading] = useState(true);
 
 
-    const fetchItem = async () => {
+
+    useEffect(() => {
+    const fetchData = async () => {
         try {
-            const product = await fetch('./db.json');
-            const data = await product.json();
+            const response = await fetch('./db.json');
+            const data = await response.json();
             setQuadcopter(data.quadcopter);
         } catch (e) {
             console.error('error fetching data from server')
         }
-    };
 
-    useEffect(() => {
-        fetchItem();
+        setLoading(false);
+    }
+
+    fetchData();
+
     }, []);
 
 
@@ -33,7 +38,6 @@ function App() {
     //         setQuadcopter(fetchItem.quadcopter)
     //     }) ()
     // }, [])
-
 
 
     const addToCart = (name, price) => {
@@ -52,13 +56,15 @@ function App() {
 
     return (
         <div className={styles.App}>
-            <header>
-                <Cart quadcopter={cartItem}/>
-                <Products  data={quadcopter} addToCart={addToCart} />
-            </header>
+            <Cart quadcopter={cartItem}/>
+            {loading && 'Loading...'}
+            <Products data={quadcopter} addToCart={addToCart}/>
         </div>
     );
 }
+
+
+
 
 export default App;
 

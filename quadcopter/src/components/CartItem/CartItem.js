@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const CartItem = ({ name, count }) => {
 
     return(
@@ -8,6 +10,13 @@ const CartItem = ({ name, count }) => {
             <span>{ count }</span>
         </div>
     )
+};
+
+
+CartItem.propTypes = {
+    name: PropTypes.string,
+    count: PropTypes.number
 }
+
 
 export default CartItem;

@@ -1,9 +1,19 @@
 import Button from '../Button/Button'
 import './Modal.css';
 import {ReactComponent as Cross} from "../../assets/cross.svg";
+import {useEffect} from "react"
 
 
 const Modal = ({closeModal, addToCart, name, price}) => {
+
+
+    useEffect( () => {
+        document.body.classList.add('scroll-lock', 'scroll-lock-ios');
+        return () => {
+            document.body.classList.remove('scroll-lock', 'scroll-lock-ios');
+        }
+    }, [] )
+
     return (
         <div className='background'>
             <div className='content'>
@@ -15,8 +25,6 @@ const Modal = ({closeModal, addToCart, name, price}) => {
                     <p className='modalQuestion'> Are you sure you want to buy : </p>
                     <p className='modalAnswer'> {name} - {price+' ₴'}  ?</p>
                 </div>
-
-
 
                 <div className='buttonBlock'>
                     <Button text='Ok' className='btn btn-success' onClick={() => {
@@ -31,4 +39,4 @@ const Modal = ({closeModal, addToCart, name, price}) => {
 }
 
 
-export default Modal
+export default Modal;
