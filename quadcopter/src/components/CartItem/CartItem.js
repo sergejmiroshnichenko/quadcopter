@@ -18,5 +18,10 @@ CartItem.propTypes = {
     count: PropTypes.number
 }
 
+CartItem.defaultProps = {
+    name: '',
+    count: null
+}
+
 
 export default CartItem;

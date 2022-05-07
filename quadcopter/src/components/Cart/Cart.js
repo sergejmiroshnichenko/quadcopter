@@ -9,7 +9,7 @@ const Cart = ({quadcopter}) => {
         <div>
             <h2>Cart</h2>
             <>
-                {quadcopter && quadcopter.map(item => <CartItem {...item}/>)}
+                {quadcopter && quadcopter.map(item => <CartItem key={item.name} {...item}/>)}
             </>
             <p className={styles.total}> {quadcopter.length > 0 ? 'Total: ' + quadcopter.reduce((acc, item) => (acc += item.price * item.count, acc), 0) + ' ₴' : 'Price : 0' + ' ₴'}</p>
 
@@ -19,7 +19,7 @@ const Cart = ({quadcopter}) => {
 
 
 Cart.propTypes = {
-    quadcopter: PropTypes.array
+    quadcopter: PropTypes.array.isRequired
 }
 
 

@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 import Modal from '../Modal/Modal';
+import PropTypes from 'prop-types'
 
 
 const ProductItem = ({ name, price, srs, code, color, addToCart }) => {
@@ -52,6 +53,24 @@ const ProductItem = ({ name, price, srs, code, color, addToCart }) => {
         </div>
 
     )
+};
+
+
+ProductItem.propTypes = {
+    name: PropTypes.string,
+    price: PropTypes.number,
+    srs: PropTypes.string.isRequired,
+    code: PropTypes.number,
+    color: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    addToCart: PropTypes.func
+}
+
+ProductItem.defaultProps = {
+    name: '',
+    price: null,
+    code: null,
+    color: '',
+    addToCart: () => {}
 }
 
 

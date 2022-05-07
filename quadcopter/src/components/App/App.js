@@ -1,7 +1,7 @@
 import styles from './App.module.scss';
 import {useState, useEffect} from "react";
-import Products from "./components/Products/Products";
-import Cart from "./components/Cart/Cart";
+import Products from "../Products/Products";
+import Cart from "../Cart/Cart";
 
 
 
@@ -40,25 +40,13 @@ const App = () => {
     // }, [])
 
 
-    const addToCart = (name, price) => {
 
-        setCartItem((prev) => {
-            const index = prev.findIndex(item => item.name === name);
-            if (index === -1) {
-                return [...prev, {name, price, count: 1}]
-            } else {
-                const newState = [...prev]
-                newState[index].count += 1
-                return newState
-            }
-        })
-    }
 
     return (
         <div className={styles.App}>
             <Cart quadcopter={cartItem}/>
             {loading && 'Loading...'}
-            <Products data={quadcopter} addToCart={addToCart}/>
+            <Products data={quadcopter} setCartItem={setCartItem}/>
         </div>
     );
 }
