@@ -1,11 +1,11 @@
 import Button from '../Button/Button'
-import './Modal.css';
+import styles from './Modal.module.scss';
 import {ReactComponent as Cross} from "../../assets/cross.svg";
 import {useEffect} from "react";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 
-const Modal = ({closeModal, addToCart, name, price}) => {
+const Modal = ({closeModal, addToCart, name, price }) => {
 
 
     useEffect(() => {
@@ -16,23 +16,23 @@ const Modal = ({closeModal, addToCart, name, price}) => {
     }, [])
 
     return (
-        <div className='background'>
-            <div className='content'>
-                <div className='modalTitle'>
-                    <h3>Confirmation</h3>
+        <div className={styles.background}>
+            <div className={styles.content}>
+                <div className={styles.title}>
+                    <h3 className={styles.confirmation}>Confirmation</h3>
                     <Cross onClick={closeModal}/>
                 </div>
-                <div className='block'>
-                    <p className='modalQuestion'> Are you sure you want to buy : </p>
-                    <p className='modalAnswer'> {name} - {price + ' ₴'} ?</p>
+                <div className={styles.block}>
+                    <p className={styles.question}> Are you sure you want to buy : </p>
+                    <p className={styles.answer}> {name} - {price + ' ₴'} ?</p>
                 </div>
 
-                <div className='buttonBlock'>
-                    <Button text='Ok' className='btn btn-success' onClick={() => {
+                <div className={styles.btnBlock}>
+                    <Button text='Ok'  className={styles.btnSuccess} onClick={() => {
                         closeModal();
                         addToCart(name, price);
                     }}/>
-                    <Button text='Cancel' className='btn btn-danger' onClick={closeModal}/>
+                    <Button text='Cancel' className={styles.btnDanger}  onClick={closeModal}/>
                 </div>
             </div>
         </div>
