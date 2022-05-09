@@ -12,3 +12,12 @@ code {
   monospace;
 }
 
+.scroll-lock-ios {
+  overflow: hidden;
+  position: fixed;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
