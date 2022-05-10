@@ -48,7 +48,7 @@ const ProductItem = ({ name, price, srs, code, color, addToCart }) => {
             <p className={styles.price}>{price} ₴ </p>
 
             <div>
-                <Button variant="outline-warning" onClick={() => openModal()}> <Cart className={styles.cart} /> Add to cart </Button>
+                <Button variant="outline-success" onClick={() => openModal()}> <Cart className={styles.cart} /> Add to cart </Button>
             </div>
         </div>
 

@@ -2,7 +2,8 @@ import styles from './App.module.scss';
 import {useState, useEffect} from "react";
 import Products from "../Products/Products";
 import Cart from "../Cart/Cart";
-
+import Header from '../Header/Header';
+import {BrowserRouter} from "react-router-dom";
 
 
 const App = () => {
@@ -43,11 +44,15 @@ const App = () => {
 
 
     return (
-        <div className={styles.App}>
-            <Cart quadcopter={cartItem}/>
-            {loading && 'Loading...'}
-            <Products data={quadcopter} setCartItem={setCartItem}/>
-        </div>
+        <BrowserRouter>
+            <div className={styles.App}>
+                <Cart quadcopter={cartItem}/>
+                <Header/>
+                {loading && 'Loading...'}
+                <Products data={quadcopter} setCartItem={setCartItem}/>
+            </div>
+        </BrowserRouter>
+
     );
 }
 
