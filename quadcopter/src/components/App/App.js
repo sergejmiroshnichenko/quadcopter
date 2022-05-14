@@ -4,6 +4,8 @@ import Products from "../Products/Products";
 import Cart from "../Cart/Cart";
 import Header from '../Header/Header';
 import {BrowserRouter} from "react-router-dom";
+import Routers from '../../Routers/Routers';
+
 
 
 const App = () => {
@@ -32,6 +34,8 @@ const App = () => {
     }, []);
 
 
+
+
     // useEffect( () => {
     //     (async () => {
     //         const fetchItem = await fetch('./db.json')            /*   variant # 2   */
@@ -42,12 +46,13 @@ const App = () => {
 
 
 
-
     return (
         <BrowserRouter>
             <div className={styles.App}>
+
                 <Cart quadcopter={cartItem}/>
                 <Header/>
+                <Routers/>
                 {loading && 'Loading...'}
                 <Products data={quadcopter} setCartItem={setCartItem}/>
             </div>
