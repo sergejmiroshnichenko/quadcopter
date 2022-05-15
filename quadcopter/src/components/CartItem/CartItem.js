@@ -1,15 +1,25 @@
 import PropTypes from "prop-types";
+import styles from './CartItem.module.scss'
 
 
-const CartItem = ({ name, count, srs }) => {
+const CartItem = ({name, count, srs, price}) => {
 
-    return(
+    return (
         <div>
             <div>
-                <span>{ name }</span>
+                <img className={styles.images} src={srs} alt=""/>
             </div>
-            <span>{ count }</span>
-            <img src={srs} alt=""/>
+
+                <div>
+                    <p className={styles.name}>{name}</p>
+                    <p className={styles.price}>{price + ' ₴'}</p>
+                </div>
+                <div className={styles.blockCount}>
+                    <p className={styles.count}>{count}</p>
+                </div>
+
+
+
         </div>
     )
 };

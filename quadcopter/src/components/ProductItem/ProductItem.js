@@ -48,7 +48,6 @@ const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, is
                 <Button variant="outline-success" onClick={() => openModal()}> <Cart className={styles.cart} /> Add to cart </Button>
             </div>
         </div>
-
     )
 };
 

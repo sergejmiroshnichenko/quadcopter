@@ -2,9 +2,11 @@ import './Header.css';
 import {NavLink} from "react-router-dom";
 import { ReactComponent as Cart } from "../../assets/cart.svg";
 import { ReactComponent as StarIcon } from "../../assets/star_icon.svg";
+import styles from '../Cart/Cart.module.scss'
 
 
-const Header = () => {
+const Header = ({data}) => {
+
     return (
         <nav className='nav'>
             <ul className='menu'>
@@ -15,11 +17,10 @@ const Header = () => {
                     <NavLink to="/favourite"><StarIcon className='starNumber'/>Favourite</NavLink>
                 </li>
                 <li className='navLink'>
-                    <NavLink to="/cart"><Cart className='cartNumber'/>Cart</NavLink>
+                    <NavLink to="/cart"> <Cart className='cartNumber'/>Cart {data.length !== 0 && <p className={styles.counter}> {data.reduce((acc, item) => (acc += item.count, acc), 0)} </p>}</NavLink>
                 </li>
             </ul>
         </nav>
-
     )
 }
 

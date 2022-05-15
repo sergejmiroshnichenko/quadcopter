@@ -2,6 +2,7 @@
     font-size: 20px;
     color: blueviolet;
     font-weight: 800;
+    margin-top: 350px;
 }
 
 .counter{
@@ -12,8 +13,14 @@
     height: 22px;
     background:red;
     border-radius: 50%;
-    transform: translateY(268%);
-    margin-left: 60.2%;
+    transform: translateY(-187%);
+    margin-left: 12.5%;
+}
+
+.flex{
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
 }
 
 

@@ -1,26 +1,21 @@
 import React from 'react';
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import FavouritePages from '../pages/FavouritePages/FavouritePages';
 import CartPages from '../pages/CartPages/CartPages';
 import HomePages from '../pages/HomePages/HomePages'
 
 
 
-const Routers = ({data, setQuadcopter}) => {
+const Routers = ({ data, setQuadcopter }) => {
 
 
     const toFavourite = (name) => {
 
-
         setQuadcopter((prev) => {
             const index = prev.findIndex(item => item.name === name);
-            console.log(name)
-           // return [...prev, {...prev[index], isFavourite : prev[index].isFavourite !== true}];
             const newState = [...prev];
             newState[index] = {...newState[index], isFavourite : newState[index].isFavourite !== true};
             return newState;
-
-
         })
     }
 
@@ -36,7 +31,7 @@ const Routers = ({data, setQuadcopter}) => {
             />
 
             <Route path="/cart"
-                element = {<CartPages data={data.filter((item) => item.isinCart)}/>}
+                element = {<CartPages data={data.filter((item) => item.isinCart)} />}
             />
         </Routes>
     );

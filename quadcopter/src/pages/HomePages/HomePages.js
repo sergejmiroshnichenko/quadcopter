@@ -1,14 +1,10 @@
-// import {useEffect, useState} from "react";
-// import Products from "../../components/Products/Products";
-
-
 import Products from "../../components/Products/Products";
+
+
 
 const HomePages = ({data, setCartItem, toFavourite}) => {
 
-
     const addToCart = (name, price) => {
-
         setCartItem((prev) => {
             const index = prev.findIndex(item => item.name === name);
             if (index === -1) {
@@ -17,7 +13,7 @@ const HomePages = ({data, setCartItem, toFavourite}) => {
                 const newState = [...prev]
                 newState[index].count += 1;
                 newState[index].isinCart = true;
-                localStorage.setItem('cart', JSON.stringify(newState))
+                // localStorage.setItem('cart', JSON.stringify(newState))
                 return newState;
             }
         })
