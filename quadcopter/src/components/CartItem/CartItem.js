@@ -17,9 +17,6 @@ const CartItem = ({name, count, srs, price}) => {
                 <div className={styles.blockCount}>
                     <p className={styles.count}>{count}</p>
                 </div>
-
-
-
         </div>
     )
 };
