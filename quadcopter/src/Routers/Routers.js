@@ -4,20 +4,39 @@ import FavouritePages from '../pages/FavouritePages/FavouritePages';
 import CartPages from '../pages/CartPages/CartPages';
 import HomePages from '../pages/HomePages/HomePages'
 
-const Routers = () => {
+
+
+const Routers = ({data, setQuadcopter}) => {
+
+
+    const toFavourite = (name) => {
+
+
+        setQuadcopter((prev) => {
+            const index = prev.findIndex(item => item.name === name);
+            console.log(name)
+           // return [...prev, {...prev[index], isFavourite : prev[index].isFavourite !== true}];
+            const newState = [...prev];
+            newState[index] = {...newState[index], isFavourite : newState[index].isFavourite !== true};
+            return newState;
+
+
+        })
+    }
+
     return (
 
         <Routes>
             <Route path="/"
-                element = {<HomePages/>}
+                element = {<HomePages data={data} setCartItem={setQuadcopter} toFavourite={toFavourite}/>}
             />
 
             <Route path="/favourite"
-                element = {<FavouritePages/>}
+                element = {<FavouritePages toFavourite={toFavourite} setCartItem={setQuadcopter} data={data.filter((item) => item.isFavourite)}/>}
             />
 
             <Route path="/cart"
-                element = {<CartPages/>}
+                element = {<CartPages data={data.filter((item) => item.isinCart)}/>}
             />
         </Routes>
     );

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 
-const CartItem = ({ name, count }) => {
+const CartItem = ({ name, count, srs }) => {
 
     return(
         <div>
@@ -9,6 +9,7 @@ const CartItem = ({ name, count }) => {
                 <span>{ name }</span>
             </div>
             <span>{ count }</span>
+            <img src={srs} alt=""/>
         </div>
     )
 };

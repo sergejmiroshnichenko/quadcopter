@@ -1,8 +1,11 @@
+import Cart from '../../components/Cart/Cart'
 
-const CartPages = () => {
 
+const CartPages = ({data}) => {
+    console.log(data)
     return(
         <section>
+            <Cart data={data}/>
 
         </section>
     )

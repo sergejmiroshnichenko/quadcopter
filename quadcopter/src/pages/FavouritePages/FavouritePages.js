@@ -1,9 +1,13 @@
+import Products from "../../components/Products/Products";
 
 
-const FavouritePages = () => {
+const FavouritePages = ({data, toFavourite}) => {
+
+
+
     return (
         <div>
-            <p>Favourite</p>
+            <Products data={data} toFavourite={toFavourite} />
         </div>
     )
 }

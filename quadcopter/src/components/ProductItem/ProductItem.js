@@ -7,20 +7,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 import Modal from '../Modal/Modal';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 
-const ProductItem = ({ name, price, srs, code, color, addToCart }) => {
+const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, isFavourite }) => {
 
-    const [isFavourite, SetIsFavourite] = useState([]);
+
     const [modal, setModal] = useState(false);
 
     const drawFavourite = () => {
-        if (!isFavourite) {
-            SetIsFavourite(true)
-        } else if (isFavourite) {
-            SetIsFavourite(false)
-        }
+        toFavourite(name)
     }
 
     const openModal = () => {
@@ -33,12 +29,13 @@ const ProductItem = ({ name, price, srs, code, color, addToCart }) => {
 
     return (
 
+
         <div className={styles.productFlex}>
 
             {modal && <Modal name={name} price={price} closeModal={closeModal} addToCart={addToCart} />}
 
             <div onClick={drawFavourite} className={styles.starIcon}>
-                {isFavourite ? <StarIcon /> : <StarFavourite className={styles.star} />}
+                {isFavourite ? <StarFavourite className={styles.star}/> : <StarIcon />  }
             </div>
 
             <img src={srs} alt="pic" width={200} height={200} />
@@ -56,22 +53,22 @@ const ProductItem = ({ name, price, srs, code, color, addToCart }) => {
 };
 
 
-ProductItem.propTypes = {
-    name: PropTypes.string,
-    price: PropTypes.number,
-    srs: PropTypes.string.isRequired,
-    code: PropTypes.number,
-    color: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    addToCart: PropTypes.func
-}
-
-ProductItem.defaultProps = {
-    name: '',
-    price: null,
-    code: null,
-    color: '',
-    addToCart: () => {}
-}
+// ProductItem.propTypes = {
+//     name: PropTypes.string,
+//     price: PropTypes.number,
+//     srs: PropTypes.string.isRequired,
+//     code: PropTypes.number,
+//     color: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+//     addToCart: PropTypes.func
+// }
+//
+// ProductItem.defaultProps = {
+//     name: '',
+//     price: null,
+//     code: null,
+//     color: '',
+//     addToCart: () => {}
+// }
 
 
 export default ProductItem;
