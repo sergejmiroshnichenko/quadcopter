@@ -1,4 +1,5 @@
-**Projects’ stack and tools: 
+***Projects’ stack and tools:**
+
  - React, 
  - React-router-dom, 
  - Bootstrap, 
