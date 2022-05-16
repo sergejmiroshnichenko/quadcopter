@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import styles from './CartItem.module.scss'
 
 
-const CartItem = ({name, count, srs, price}) => {
+const CartItem = ({ name, count, srs, price }) => {
 
     return (
         <div>
@@ -11,11 +11,11 @@ const CartItem = ({name, count, srs, price}) => {
             </div>
 
                 <div>
-                    <p className={styles.name}>{name}</p>
-                    <p className={styles.price}>{price + ' ₴'}</p>
+                    <p className={styles.name}>{ name }</p>
+                    <p className={styles.price}>{ price + ' ₴' }</p>
                 </div>
                 <div className={styles.blockCount}>
-                    <p className={styles.count}>{count}</p>
+                    <p className={styles.count}>{ count }</p>
                 </div>
         </div>
     )
@@ -24,12 +24,16 @@ const CartItem = ({name, count, srs, price}) => {
 
 CartItem.propTypes = {
     name: PropTypes.string,
-    count: PropTypes.number
+    count: PropTypes.number,
+    price: PropTypes.number,
+    srs: PropTypes.string
 }
 
 CartItem.defaultProps = {
     name: '',
-    count: null
+    count: null,
+    price: null,
+    srs: ''
 }
 
 

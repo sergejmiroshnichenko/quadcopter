@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import FavouritePages from '../pages/FavouritePages/FavouritePages';
 import CartPages from '../pages/CartPages/CartPages';
 import HomePages from '../pages/HomePages/HomePages'
+import PropTypes from "prop-types";
 
 
 
@@ -34,6 +35,19 @@ const Routers = ({ data, setQuadcopter }) => {
                 element = {<CartPages data={data.filter((item) => item.isinCart)} />}
             />
         </Routes>
-    );
+    )
+};
+
+
+Routers.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object),
+    setQuadcopter: PropTypes.func
+};
+
+Routers.defaultProps = {
+    data: [],
+    setQuadcopter: () => {}
 }
+
+
 export default Routers;

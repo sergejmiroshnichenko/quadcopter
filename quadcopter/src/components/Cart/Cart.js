@@ -1,9 +1,9 @@
 import CartItem from '../CartItem/CartItem'
 import styles from './Cart.module.scss'
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 
-const Cart = ({data}) => {
+const Cart = ({ data }) => {
 
     return (
         <>
@@ -11,20 +11,21 @@ const Cart = ({data}) => {
                 {data && data.map(item => <CartItem key={item.name} {...item} />)}
             </div>
 
-
             <div>
-                <p className={styles.total}> {data.length > 0 ? 'Total: ' + data.reduce((acc, item) => (acc += item.price * item.count, acc), 0) + ' ₴' : 'Price : 0' + ' ₴'}</p>
-
-                {/*{data.length !== 0 && <p className={styles.counter}> {data.reduce((acc, item) => (acc += item.count, acc), 0)} </p>}*/}
+                <p className={styles.total}> {data.length > 0 ? 'Total: ' + data.reduce((acc, item) => (acc += item.price * item.count, acc), 0) + ' ₴' : 'Price : 0 ₴'} </p>
             </div>
         </>
     )
 };
 
 
-// Cart.propTypes = {
-//     quadcopter: PropTypes.array.isRequired
-// }
+Cart.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object)
+};
+
+Cart.defaultProps = {
+    data: []
+}
 
 
 export default Cart;

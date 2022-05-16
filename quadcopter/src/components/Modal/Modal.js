@@ -5,7 +5,7 @@ import {useEffect} from "react";
 import PropTypes from 'prop-types';
 
 
-const Modal = ({closeModal, addToCart, name, price }) => {
+const Modal = ({ closeModal, addToCart, name, price }) => {
 
 
     useEffect(() => {

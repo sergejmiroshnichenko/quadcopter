@@ -1,7 +1,7 @@
 import styles from './App.module.scss';
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import Header from '../Header/Header';
-import {BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Routers from '../../Routers/Routers';
 
 
@@ -30,7 +30,6 @@ const App = () => {
 
 
 
-
     // useEffect( () => {
     //     (async () => {
     //         const fetchItem = await fetch('./db.json')            /*   variant # 2   */
@@ -52,8 +51,6 @@ const App = () => {
 
     );
 }
-
-
 
 
 export default App;

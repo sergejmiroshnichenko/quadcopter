@@ -1,7 +1,9 @@
 import Products from "../../components/Products/Products";
+import PropTypes from "prop-types";
 
 
-const FavouritePages = ({data, toFavourite, setCartItem}) => {
+
+const FavouritePages = ({ data, toFavourite, setCartItem }) => {
 
     const addToCart = (name, price) => {
         setCartItem((prev) => {
@@ -23,6 +25,18 @@ const FavouritePages = ({data, toFavourite, setCartItem}) => {
             <Products data={data} toFavourite={toFavourite} addToCart={addToCart}/>
         </div>
     )
+};
+
+FavouritePages.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    toFavourite: PropTypes.func,
+    setCartItem: PropTypes.func
 }
+
+FavouritePages.defaultProps = {
+    toFavourite: () => {},
+    setCartItem: () => {}
+}
+
 
 export default FavouritePages;
