@@ -1,6 +1,8 @@
 import CartItem from '../CartItem/CartItem'
 import styles from './Cart.module.scss'
 import PropTypes from 'prop-types';
+import { ReactComponent as Basket } from "../../assets/cart_empty.svg";
+
 
 
 const Cart = ({ data }) => {
@@ -12,7 +14,7 @@ const Cart = ({ data }) => {
             </div>
 
             <div>
-                <p className={styles.total}> {data.length > 0 ? 'Total: ' + data.reduce((acc, item) => (acc += item.price * item.count, acc), 0) + ' ₴' : 'Price : 0 ₴'} </p>
+                <p className={styles.total}> {data.length > 0 ? 'Total: ' + data.reduce((acc, item) => (acc += item.price * item.count, acc), 0) + ' ₴' : <Basket/> } </p>
             </div>
         </>
     )

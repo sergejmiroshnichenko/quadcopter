@@ -9,7 +9,6 @@ import PropTypes from "prop-types";
 
 const Routers = ({ data, setQuadcopter }) => {
 
-
     const toFavourite = (name) => {
 
         setQuadcopter((prev) => {
