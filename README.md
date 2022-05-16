@@ -1,4 +1,4 @@
-___Projects’ stack and tools:___
+***Projects’ stack and tools:___
 
  - React, 
  - React-router-dom, 
