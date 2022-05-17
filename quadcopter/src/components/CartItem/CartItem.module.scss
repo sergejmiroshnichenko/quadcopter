@@ -1,20 +1,23 @@
 .images{
-  width: 175px;
-  height: 150px;
+  width: 150px;
+  height: 125px;
+  margin: 0 auto;
 }
 
 .name{
   font-weight: 700;
+  margin-top: 30px;
+  font-size: 15px;
 }
 
 .price{
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   color: red;
 }
 
 .blockCount{
-  font-size: 14px;
+  font-size: 17px;
   color: black;
   width: 45px;
   height: 45px;
@@ -25,7 +28,44 @@
 }
 
 .count{
-  transform: translateY(45%);
+  transform: translateY(28%);
   font-weight: 600;
 }
+
+.plus{
+  border: none;
+  background:white;
+  transform: translateY(14%);
+  opacity: 0.85
+}
+
+.minus{
+  border: none;
+  background:white;
+  width: 42px;
+  transform: translateY(14%);
+  opacity: 0.85
+}
+
+.flex{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+.cartItem{
+  display: flex;
+  padding: 25px;
+  border: 1px solid burlywood;
+  flex-direction: column;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.code{
+  margin: 0;
+  font-size: 14px;
+}
+
+
 

@@ -1,14 +1,15 @@
 .flex{
     display: flex;
-    width: 700px;
-    margin: 10px auto;
+    margin: 40px auto;
+    justify-content: center;
+    gap: 18px;
 }
 
 .total{
     font-size: 20px;
     color: blueviolet;
     font-weight: 800;
-    margin-top: 125px;
+    margin-top: 50px;
 }
 
 .counter{

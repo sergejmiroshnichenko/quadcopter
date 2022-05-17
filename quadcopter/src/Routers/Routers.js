@@ -9,12 +9,25 @@ import PropTypes from "prop-types";
 
 const Routers = ({ data, setQuadcopter }) => {
 
-    const toFavourite = (name) => {
+    const addToCart = (name, price) => {
+        setQuadcopter((prev) => {
+            const index = prev.findIndex(item => item.name === name);
+            if (index === -1) {
+                return [...prev, { name, price, count: 1 }]
+            } else {
+                const newState = [...prev]
+                newState[index].count += 1;
+                newState[index].isinCart = true;
+                return newState;
+            }
+        })
+    }
 
+    const toFavourite = (name) => {
         setQuadcopter((prev) => {
             const index = prev.findIndex(item => item.name === name);
             const newState = [...prev];
-            newState[index] = {...newState[index], isFavourite : newState[index].isFavourite !== true};
+            newState[index] = { ...newState[index], isFavourite: newState[index].isFavourite !== true };
             return newState;
         })
     }
@@ -23,15 +36,15 @@ const Routers = ({ data, setQuadcopter }) => {
 
         <Routes>
             <Route path="/"
-                element = {<HomePages data={data} setCartItem={setQuadcopter} toFavourite={toFavourite}/>}
+                element={<HomePages addToCart={addToCart}  data={data}  toFavourite={toFavourite} />}
             />
 
             <Route path="/favourite"
-                element = {<FavouritePages toFavourite={toFavourite} setCartItem={setQuadcopter} data={data.filter((item) => item.isFavourite)}/>}
+                element={<FavouritePages addToCart={addToCart}  toFavourite={toFavourite}  data={data.filter((item) => item.isFavourite)} />}
             />
 
             <Route path="/cart"
-                element = {<CartPages data={data.filter((item) => item.isinCart)} />}
+                element={<CartPages data={data.filter((item) => item.isinCart)} />}
             />
         </Routes>
     )
@@ -40,12 +53,12 @@ const Routers = ({ data, setQuadcopter }) => {
 
 Routers.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object),
-    setQuadcopter: PropTypes.func
+    setQuadcopter: PropTypes.func,
 };
 
 Routers.defaultProps = {
     data: [],
-    setQuadcopter: () => {}
+    setQuadcopter: () => { },
 }
 
 
