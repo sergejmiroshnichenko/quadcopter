@@ -5,7 +5,9 @@ import { BrowserRouter } from "react-router-dom";
 import Routers from '../../Routers/Routers';
 
 const App = () => {
+
     const [quadcopter, setQuadcopter] = useState([]);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -29,7 +31,6 @@ const App = () => {
                 <Routers data={quadcopter} setQuadcopter={setQuadcopter} />
             </div>
         </BrowserRouter>
-
     );
 }
 

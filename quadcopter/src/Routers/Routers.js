@@ -44,7 +44,7 @@ const Routers = ({ data, setQuadcopter }) => {
             />
 
             <Route path="/cart"
-                element={<CartPages data={data.filter((item) => item.isinCart)} />}
+                element={<CartPages data={data.filter((item) => item.isinCart)} setQuadcopter={setQuadcopter} />}
             />
         </Routes>
     )

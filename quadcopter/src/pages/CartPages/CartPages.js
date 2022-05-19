@@ -2,11 +2,11 @@ import Cart from '../../components/Cart/Cart';
 import PropTypes from "prop-types";
 
 
-const CartPages = ({ data }) => {
+const CartPages = ({ data, setQuadcopter }) => {
 
     return (
         <section>
-            <Cart data={data}/>
+            <Cart data={data} setQuadcopter={setQuadcopter} />
         </section>
     )
 };
