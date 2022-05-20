@@ -10,7 +10,15 @@ const Cart = ({ data, setQuadcopter }) => {
     let totalSum = 'Total: ' + data.reduce((acc, item) => (acc += item.price * item.count, acc), 0) + ' ₴'
 
     const deleteCartItem = (name) => {
-        setQuadcopter((prev) => prev.filter((product) => name !== product.name));
+        setQuadcopter((prev) => {
+            const index = prev.findIndex(item => item.name === name);
+            if (index !== -1) {
+                const newState = [...prev]
+                newState[index].count -= newState[index].count;
+                newState[index].isinCart = false;
+                return newState;
+            }
+        })
     }
 
     const increase = (name) => {
