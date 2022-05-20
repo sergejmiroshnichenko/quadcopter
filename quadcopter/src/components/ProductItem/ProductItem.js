@@ -11,7 +11,7 @@ import PropTypes from 'prop-types'
 
 
 
-const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, isFavourite }) => {
+const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, isFavourite, text }) => {
 
 
     const [modal, setModal] = useState(false);
@@ -33,7 +33,7 @@ const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, is
 
         <div className={styles.productFlex}>
 
-            {modal && <Modal name={name} price={price} closeModal={closeModal} addToCart={addToCart} />}
+            {modal && <Modal name={name} price={price} text={'Are you sure you want to buy :'} closeModal={closeModal} addToCart={addToCart} />}
 
             <div onClick={drawFavourite} className={styles.starIcon}>
                 {isFavourite ? <StarFavourite className={styles.star}/> : <StarIcon />  }

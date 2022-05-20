@@ -5,7 +5,7 @@ import {useEffect} from "react";
 import PropTypes from 'prop-types';
 
 
-const Modal = ({ closeModal, addToCart, name, price }) => {
+const Modal = ({ closeModal, addToCart, name, price, text, deleteCartItem }) => {
 
 
     useEffect(() => {
@@ -20,19 +20,23 @@ const Modal = ({ closeModal, addToCart, name, price }) => {
             <div className={styles.content}>
                 <div className={styles.title}>
                     <h3 className={styles.confirmation}>Confirmation</h3>
-                    <Cross className={styles.cross} onClick={closeModal}/>
+                    <Cross className={styles.cross} onClick={closeModal} />
                 </div>
                 <div className={styles.block}>
-                    <p className={styles.question}> Are you sure you want to buy : </p>
+                    <p className={styles.question}> {text} </p>
                     <p className={styles.answer}> {name} - {price + ' ₴'} ?</p>
                 </div>
 
                 <div className={styles.btnBlock}>
+
                     <Button text='Ok'  className={styles.btnSuccess} type='button' onClick={() => {
                         closeModal();
                         addToCart(name, price);
-                    }}/>
-                    <Button text='Cancel' className={styles.btnDanger} type='button'  onClick={closeModal}/>
+                        {deleteCartItem && deleteCartItem(name)}
+                    }}
+                    />
+
+                    <Button text='Cancel' className={styles.btnDanger} type='button'  onClick={closeModal} />
                 </div>
             </div>
         </div>

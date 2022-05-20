@@ -3,18 +3,30 @@ import styles from './CartItem.module.scss';
 import {ReactComponent as Plus} from "../../assets/icon_plus.svg";
 import {ReactComponent as Minus} from "../../assets/icon_minus.svg";
 import {ReactComponent as CartDelete} from "../../assets/delete_cart.svg";
-// import {ReactComponent as IconLimited} from "../../assets/icon_limited.svg";
+import Modal from '../Modal/Modal';
+import {useState} from "react";
 
 
 
 
-const CartItem = ({ name, srs, code, color, price, count, increase, decrease }) => {
+const CartItem = ({ name, srs, code, color, price, count, increase, decrease, deleteCartItem }) => {
 
+    const [modal, setModal] = useState(false);
+
+    const openModal = () => {
+        setModal(true)
+    }
+
+    const closeModal = () => {
+        setModal(false)
+    }
 
 
     return (
+
         <div className={styles.cartItem}>
-            <button className={styles.delete}><CartDelete/></button>
+            {modal && <Modal name={name} price={price} text={'Are you sure want to remove this quadcopter from your cart? :'} deleteCartItem={deleteCartItem} closeModal={closeModal} />}
+            <button className={styles.delete} onClick={openModal}><CartDelete/> </button>
             <img className={styles.images} src={srs} alt=""/>
             <div>
                 <p className={styles.name}>{name}</p>
@@ -24,7 +36,7 @@ const CartItem = ({ name, srs, code, color, price, count, increase, decrease }) 
             </div>
             <div className={styles.flex}>
                 <div>
-                    <button className={styles.minus} onClick={() => decrease(name)} ><Minus/></button>
+                    <button className={styles.minus} onClick={() => decrease(name)} ><Minus /></button>
                 </div>
                 <div className={styles.blockCount}>
                     <p className={styles.count}>{count}</p>

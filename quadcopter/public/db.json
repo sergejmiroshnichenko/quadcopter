@@ -99,6 +99,57 @@
       "isFavourite" : false,
       "isinCart" : false,
       "count": 0
+    },
+    {
+      "name": "Drone Toys-Sky S165",
+      "price": 2861,
+      "srs": "https://content.rozetka.com.ua/goods/images/big/119596861.jpg",
+      "code": 279099599,
+      "color": "black",
+      "isFavourite" : false,
+      "isinCart" : false,
+      "count": 0
+    },
+    {
+      "name": "Drone DJI Mini 2",
+      "price": 15990,
+      "srs": "https://content1.rozetka.com.ua/goods/images/big/262336446.jpg",
+      "code": 278569599,
+      "color": "black",
+      "isFavourite" : false,
+      "isinCart" : false,
+      "count": 0
+    },
+    {
+      "name": "Drone Visuo Zen Blitz",
+      "price": 6999,
+      "srs": "https://content.rozetka.com.ua/goods/images/big/16881271.jpg",
+      "code": 312569599,
+      "color": "black",
+      "isFavourite" : false,
+      "isinCart" : false,
+      "count": 0
+    },
+    {
+      "name": "Drone RC KF107 - 4K, 5G",
+      "price": 5295,
+      "srs": "https://content1.rozetka.com.ua/goods/images/big/7898475.jpg",
+      "code": 356989599,
+      "color": "black",
+      "isFavourite" : false,
+      "isinCart" : false,
+      "count": 0
+    },
+    {
+      "name": "Drone DJI FPV",
+      "price": 34799,
+      "srs": "https://content.rozetka.com.ua/goods/images/big/261100800.jpg",
+      "code": 356000599,
+      "color": "grey",
+      "isFavourite" : false,
+      "isinCart" : false,
+      "count": 0
     }
+
   ]
 }

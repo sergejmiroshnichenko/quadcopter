@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 
 const Routers = ({ data, setQuadcopter }) => {
 
+
     const addToCart = (name, price) => {
         setQuadcopter((prev) => {
             const index = prev.findIndex(item => item.name === name);

@@ -7,6 +7,7 @@
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
 
     .content {
         background-color: white;
@@ -40,7 +41,7 @@
             border: grey solid 1px;
 
             .question {
-                margin-top: 38px;
+                margin-top: 30px;
                 font-size: 18px;
                 font-weight: 300;
             }

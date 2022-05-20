@@ -55,7 +55,7 @@
 
 .cartItem {
   display: flex;
-  padding: 25px;
+  padding: 20px 25px 25px;
   border: 1px solid burlywood;
   flex-direction: column;
   width: 250px;
@@ -71,14 +71,9 @@
   border: none;
   width: 30px;
   background: white;
-  transform: translateY(-10%);
   margin-left: 88%;
-
 }
 
-.limited{
-  color: grey;
-}
 
 
 

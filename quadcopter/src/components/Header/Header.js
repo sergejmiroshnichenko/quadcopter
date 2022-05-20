@@ -12,7 +12,9 @@ const Header = ({ data }) => {
     const filter = data.filter((item) => item.isinCart === true);
     const favourite = data.filter((item) => item.isFavourite === true);
     let sum = '';
-    sum += favourite.length
+    sum += favourite.length;
+    let totalCount = data.reduce((acc, item) => (acc += item.count, acc), 0)
+
 
 
 
@@ -26,7 +28,7 @@ const Header = ({ data }) => {
                     <NavLink to="/favourite"><StarIcon className='starNumber'/>Favourite { favourite.length > 0 && <p className={styles.counter}> {sum} </p>}</NavLink>
                 </li>
                 <li className='navLink'>
-                    <NavLink to="/cart"> <Cart className='cartNumber'/>Cart { filter.length > 0 && <p className={styles.counter}> {data.reduce((acc, item) => (acc += item.count, acc), 0)} </p>}</NavLink>
+                    <NavLink to="/cart"> <Cart className='cartNumber'/>Cart {filter.length > 0 && <p className={styles.counter}> {totalCount} </p>} </NavLink>
                 </li>
             </ul>
         </nav>
