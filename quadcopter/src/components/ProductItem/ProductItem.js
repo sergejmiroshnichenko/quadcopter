@@ -7,11 +7,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 import Modal from '../Modal/Modal';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 
 
-const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, isFavourite, text }) => {
+
+const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, isFavourite }) => {
 
 
     const [modal, setModal] = useState(false);
