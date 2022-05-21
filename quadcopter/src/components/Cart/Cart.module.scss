@@ -1,42 +1,48 @@
-.flex{
-    display: flex;
-    margin: 40px auto;
-    justify-content: center;
-    gap: 18px;
+.flex {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
-.total{
-    font-size: 20px;
-    color: blueviolet;
-    font-weight: 800;
-    margin-top: 50px;
+.total {
+  font-size: 20px;
+  color: blueviolet;
+  font-weight: 800;
+  margin-top: 125px;
 }
 
-.counter{
-    font-size: 14px;
-    color: white;
-    font-weight: 600;
-    width: 22px;
-    height: 22px;
-    background:red;
-    border-radius: 50%;
-    transform: translateY(-187%);
-    margin-left: 8.5%;
+.counter {
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+  width: 22px;
+  height: 22px;
+  background: red;
+  border-radius: 50%;
+  transform: translateY(-187%);
+  margin-left: 8.5%;
+}
+
+.empty {
+  margin-top: 150px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .counter {
-        transform: translateY(-172%);
-        margin-left: 10.5%;
-        width: 20px;
-        height: 20px;
-        font-size: 12px;
-    }
+  .counter {
+    transform: translateY(-172%);
+    margin-left: 10.5%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
 
-    .flex{
-            display: block;
-        padding-left: 10px;
-    }
+  .flex {
+    display: block;
+    padding-left: 10px;
+    padding-top: 1px;
+  }
 }
 
 

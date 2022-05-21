@@ -30,7 +30,6 @@ const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, is
 
     return (
 
-
         <div className={styles.productFlex}>
 
             {modal && <Modal name={name} price={price} text={'Are you sure you want to buy :'} closeModal={closeModal} addToCart={addToCart} />}

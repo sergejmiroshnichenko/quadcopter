@@ -57,7 +57,7 @@ const Cart = ({ data, setQuadcopter }) => {
                 {data && data.map(item => <CartItem key={item.name} {...item} deleteCartItem={deleteCartItem} increase={increase} decrease={decrease} />)}
             </div>
 
-            <p className={styles.total}> {data.length > 0 ? totalSum : <Basket/>} </p>
+            <p className={styles.total}> {data.length > 0 ? totalSum : <Basket className={styles.empty}/>} </p>
         </>
     )
 };

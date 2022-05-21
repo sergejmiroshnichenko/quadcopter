@@ -16,8 +16,6 @@ const Header = ({ data }) => {
     let totalCount = data.reduce((acc, item) => (acc += item.count, acc), 0)
 
 
-
-
     return (
         <nav className='nav'>
             <ul className='menu'>
