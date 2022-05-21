@@ -9,9 +9,9 @@ const Modal = ({ closeModal, addToCart, name, price, text, deleteCartItem }) => 
 
 
     useEffect(() => {
-        document.body.classList.add('scroll-lock', 'scroll-lock-ios');
+        document.body.classList.add('scroll-lock');
         return () => {
-            document.body.classList.remove('scroll-lock', 'scroll-lock-ios');
+            document.body.classList.remove('scroll-lock');
         }
     }, [])
 

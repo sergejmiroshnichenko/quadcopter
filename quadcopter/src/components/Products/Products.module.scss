@@ -1,14 +1,16 @@
 .wrapper{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
-    gap: 18px;
+    gap: 30px;
     margin-top: 30px;
 }
 
 li{
     list-style: none;
 }
+
 
 @media (min-width: 320px) and (max-width: 480px) {
     .wrapper{
