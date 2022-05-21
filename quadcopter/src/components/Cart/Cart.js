@@ -13,8 +13,9 @@ const Cart = ({ data, setQuadcopter }) => {
         setQuadcopter((prev) => {
             const index = prev.findIndex(item => item.name === name);
             if (index !== -1) {
-                const newState = [...prev]
-                newState[index].count -= newState[index].count;
+                const newState = [...prev];
+                newState[index].count = 0;
+                // newState[index].count -= newState[index].count;
                 newState[index].isinCart = false;
                 return newState;
             }

@@ -40,7 +40,7 @@ const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, is
             </div>
 
             <img src={srs} alt="pic" width={200} height={200} />
-            <p className={styles.className}>{name}</p>
+            <p className={styles.details}>{name}</p>
             <span>{code}</span>
             <span>{color}</span>
             <p className={styles.price}>{price} ₴ </p>

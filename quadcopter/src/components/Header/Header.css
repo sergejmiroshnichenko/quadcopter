@@ -1,5 +1,5 @@
 
-.menu{
+.menu {
     display: flex;
     justify-content: space-around;
     width: 500px;
@@ -9,39 +9,61 @@
     cursor: pointer;
 }
 
-ul li a{
+ul li a {
     text-decoration: none;
     color: white;
     font-weight: 600;
 }
 
-ul li:hover a{
+ul li:hover a {
     color: white;
 }
 
-.active{
+.active {
     color: white;
     text-decoration: none;
     opacity: 0.35;
     cursor: default;
 }
 
-.cartNumber{
+.cartNumber {
     width: 21px;
     height: 21px;
     margin-right: 14px;
 }
 
-.starNumber{
+.starNumber {
     width: 21px;
     height: 21px;
     margin-right: 15px;
 }
 
-.nav{
+.nav {
     background-color: green;
     width: 100%;
     height: 70px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .menu {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    li {
+        font-size: 22px;
+    }
+
+    .cartNumber {
+        width: 19px;
+        height: 19px;
+    }
+
+    .starNumber {
+        width: 19px;
+        height: 19px;
+        margin-right: 14px;
+    }
 }
 
 

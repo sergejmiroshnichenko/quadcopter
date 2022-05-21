@@ -21,7 +21,7 @@
         }
     }
 
-    .className {
+    .details {
         font-weight: 700;
         margin-top: 25px;
     }
@@ -38,4 +38,25 @@
             margin-bottom: 4px;
         }
     }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    img{
+        margin: 0 auto;
+    }
+
+    .details{
+        font-size: 18px;
+    }
+
+    span{
+        font-size: 16px;
+    }
+
+    .price {
+        margin-top: 15px;
+    }
+
+
 }
