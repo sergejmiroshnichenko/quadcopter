@@ -146,6 +146,59 @@
     }
 }
 
+@media (max-width: 480px)  {
+
+    .background {
+        padding: 0 10px;
+
+        .content{
+            height: 204px;
+            width: 300px;
+            transform: translate(0, 120%);
+
+            .confirmation{
+                font-size: 18px;
+                margin-top: 5px;
+            }
+
+            .block {
+                width: 290px;
+                height: 107px;
+
+                .question {
+                    margin-top: 14px;
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+
+                .answer {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+            .btnBlock {
+                margin-top: 93px;
+
+                .btnSuccess {
+                    width: 50px;
+                    height: 35px;
+                    transform: translateY(63%);
+                    font-size: 14px;
+                }
+
+                .btnDanger {
+                    width: 65px;
+                    height: 35px;
+                    margin: 14px;
+                    font-size: 15px;
+                    transform: translateY(23%);
+                }
+            }
+        }
+    }
+}
+
 
 
 
