@@ -6,4 +6,4 @@
  - SASS, 
  - Prop-types, 
  - Git, 
- - localStorage
+ - adaptive layout
