@@ -7,7 +7,6 @@ import ScrollToUpButton from "../ScrollToUp/ScrollToUpButton";
 
 
 
-
 const App = () => {
 
     const [quadcopter, setQuadcopter] = useState([]);
