@@ -7,6 +7,7 @@ import { ReactComponent as Basket } from "../../assets/cart_empty.svg";
 
 const Cart = ({ data, setQuadcopter }) => {
 
+
     let totalSum = 'Total: ' + data.reduce((acc, item) => (acc += item.price * item.count, acc), 0) + ' ₴'
 
     const deleteCartItem = (name) => {
@@ -58,6 +59,8 @@ const Cart = ({ data, setQuadcopter }) => {
             </div>
 
             <p className={styles.total}> {data.length > 0 ? totalSum : <Basket className={styles.empty}/>} </p>
+
+
         </>
     )
 };
