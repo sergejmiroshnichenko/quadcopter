@@ -54,7 +54,7 @@
         .btnBlock {
             margin-top: 144px;
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
             height: 65px;
             background: bisque;
             border-end-end-radius: 11px;
@@ -179,6 +179,8 @@
 
             .btnBlock {
                 margin-top: 93px;
+                display: flex;
+                justify-content: flex-end;
 
                 .btnSuccess {
                     width: 50px;
