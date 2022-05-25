@@ -34,6 +34,7 @@ const ScrollToUpButton = () => {
                 width: '50px',
                 height: '50px',
                 fontSize: '26px',
+                cursor: 'pointer'
             }} onClick={scrollUp}>
                 </ScrollUpIcon>
             }

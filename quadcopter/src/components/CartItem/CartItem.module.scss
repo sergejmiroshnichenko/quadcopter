@@ -36,7 +36,8 @@
   border: none;
   background: white;
   transform: translateY(14%);
-  opacity: 0.85
+  opacity: 0.85;
+  transition: 0.5s ease;
 }
 
 .minus {
@@ -44,7 +45,7 @@
   background: white;
   width: 42px;
   transform: translateY(14%);
-  opacity: 0.85
+  opacity: 0.85;
 }
 
 .flex {

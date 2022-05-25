@@ -8,7 +8,6 @@ import {useState} from "react";
 
 
 
-
 const CartItem = ({ name, srs, code, color, price, count, increase, decrease, deleteCartItem }) => {
 
     const [modal, setModal] = useState(false);
@@ -36,7 +35,7 @@ const CartItem = ({ name, srs, code, color, price, count, increase, decrease, de
             </div>
             <div className={styles.flex}>
                 <div>
-                    <button className={styles.minus} onClick={() => decrease(name)} ><Minus /></button>
+                    <button className={styles.minus} onClick={() => decrease(name)} > <Minus /></button>
                 </div>
                 <div className={styles.blockCount}>
                     <p className={styles.count}>{count}</p>

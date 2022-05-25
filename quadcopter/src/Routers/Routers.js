@@ -9,7 +9,6 @@ import PropTypes from "prop-types";
 
 const Routers = ({ data, setQuadcopter }) => {
 
-
     const addToCart = (name, price) => {
         setQuadcopter((prev) => {
             const index = prev.findIndex(item => item.name === name);
@@ -29,26 +28,12 @@ const Routers = ({ data, setQuadcopter }) => {
             const index = prev.findIndex(item => item.name === name);
             const newState = [...prev];
             newState[index] = { ...newState[index], isFavourite: newState[index].isFavourite !== true };
-           // const arrayFavourite = localStorage.getItem('favourite');
-           // if(arrayFavourite){
-           //     const arrayParse = JSON.parse(arrayFavourite);
-           //     const indexFavourite = arrayParse.indexOf(name);
-           //     if(indexFavourite === -1) {
-           //         arrayParse.push(name);
-           //         localStorage.setItem('favourite', JSON.stringify(arrayParse))
-           //     } else{
-           //         arrayParse.splice(indexFavourite, 1);
-           //         localStorage.setItem('favourite', JSON.stringify(arrayParse))
-           //     }
-           // } else{
-           //     localStorage.setItem('favourite', JSON.stringify([name]))
-           // }
             return newState;
         })
     }
 
-    return (
 
+    return (
         <Routes>
             <Route path="/"
                 element={<HomePages addToCart={addToCart}  data={data}  toFavourite={toFavourite} />}
