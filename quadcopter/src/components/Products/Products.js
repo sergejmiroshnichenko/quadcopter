@@ -2,20 +2,16 @@ import ProductItem from '../ProductItem/ProductItem';
 import styles from './Products.module.scss'
 import PropTypes from 'prop-types';
 import React from 'react';
-import {ReactComponent as Favor} from "../../assets/favourite.svg";
 
 
 const Products = ({data, addToCart, toFavourite}) => {
 
     return (
-        <>
+        <div>
             <ul className={styles.wrapper}>
                 {data && data.map((item, index) => <li key={index}><ProductItem {...item} addToCart={addToCart} toFavourite={toFavourite}/></li>)}
             </ul>
-            <p className={styles.favor}> {data.length === 0 && <Favor />} </p>
-
-
-        </>
+        </div>
     )
 };
 

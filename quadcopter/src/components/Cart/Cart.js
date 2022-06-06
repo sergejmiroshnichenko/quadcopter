@@ -59,8 +59,6 @@ const Cart = ({ data, setQuadcopter }) => {
             </div>
 
             <p className={styles.total}> {data.length > 0 ? totalSum : <Basket className={styles.empty}/>} </p>
-
-
         </>
     )
 };

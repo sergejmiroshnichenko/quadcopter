@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 
 
 
-const Routers = ({ data, setQuadcopter }) => {
+const AppRoutes = ({ data, setQuadcopter }) => {
 
     const addToCart = (name, price) => {
         setQuadcopter((prev) => {
@@ -51,15 +51,15 @@ const Routers = ({ data, setQuadcopter }) => {
 };
 
 
-Routers.propTypes = {
+AppRoutes.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object),
     setQuadcopter: PropTypes.func,
 };
 
-Routers.defaultProps = {
+AppRoutes.defaultProps = {
     data: [],
     setQuadcopter: () => { },
 }
 
 
-export default Routers;
+export default AppRoutes;

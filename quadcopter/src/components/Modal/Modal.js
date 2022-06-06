@@ -6,8 +6,7 @@ import PropTypes from 'prop-types';
 
 
 const Modal = ({ closeModal, addToCart, name, price, text, deleteCartItem }) => {
-
-
+    
     useEffect(() => {
         document.body.classList.add('scroll-lock');
         return () => {

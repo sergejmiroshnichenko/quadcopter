@@ -3,7 +3,7 @@
     {
       "name": "Drone Global GD89 FullHD",
       "price": 2579,
-      "srs": "https://content.rozetka.com.ua/goods/images/big/185230762.jpg",
+      "srs": "/images/1.jpg",
       "code": 303371038,
       "color": "black",
       "isFavourite" : false,
@@ -13,7 +13,7 @@
     {
       "name": "Drone 4DRC F3 FullHD",
       "price": 2899,
-      "srs": "https://content.rozetka.com.ua/goods/images/big/239899152.jpg",
+      "srs": "/images/2.jpg",
       "code": 306682678,
       "color": "grey",
       "isFavourite" : false,
@@ -23,7 +23,7 @@
     {
       "name": "Drone ZLRC SG108 4K Pro",
       "price": 5145,
-      "srs": "https://content.rozetka.com.ua/goods/images/big/231264889.jpg",
+      "srs": "/images/3.jpg",
       "code": 323537392,
       "color": "orange",
       "isFavourite" : false,
@@ -33,7 +33,7 @@
     {
       "name": "Drone JJRC 8811 Pro",
       "price": 5850,
-      "srs": "https://content2.rozetka.com.ua/goods/images/big/225237738.jpg",
+      "srs": "/images/4.jpg",
       "code": 277099468,
       "color": "black",
       "isFavourite" : false,
@@ -43,7 +43,7 @@
     {
       "name": "Drone KF101 / Visuo K3 Zen",
       "price": 6169,
-      "srs": "https://content1.rozetka.com.ua/goods/images/big/218749252.jpg",
+      "srs": "/images/5.jpg",
       "code": 317364013,
       "color": "black",
       "isFavourite" : false,
@@ -53,7 +53,7 @@
     {
       "name": "Drone 4DRC F4 - 4K и HD",
       "price": 6295,
-      "srs": "https://content2.rozetka.com.ua/goods/images/big/193122483.jpg",
+      "srs": "/images/6.jpg",
       "code": 267819396,
       "color": "grey",
       "isFavourite" : false,
@@ -63,7 +63,7 @@
     {
       "name": "Drone 4DRC F4 4К GPS",
       "price": 5890,
-      "srs": "https://content1.rozetka.com.ua/goods/images/big/225237743.jpg",
+      "srs": "/images/7.jpg",
       "code": 277099503,
       "color": "grey",
       "isFavourite" : false,
@@ -73,7 +73,7 @@
     {
       "name": "Drone Visuo s816 BLZ",
       "price": 2145,
-      "srs": "https://content1.rozetka.com.ua/goods/images/big/17308715.jpg",
+      "srs": "/images/8.jpg",
       "code": 124589713,
       "color": "grey",
       "isFavourite" : false,
@@ -83,7 +83,7 @@
     {
       "name": "Drone SJR F3 с 4К и Full HD",
       "price": 3450,
-      "srs": "https://content1.rozetka.com.ua/goods/images/big/161552320.jpg",
+      "srs": "/images/9.jpg",
       "code": 280851093,
       "color": "white",
       "isFavourite" : false,
@@ -93,7 +93,7 @@
     {
       "name": "Drone GD89 PRO + кейс",
       "price": 3199,
-      "srs": "https://content2.rozetka.com.ua/goods/images/big/159886117.jpg",
+      "srs": "/images/10.jpg",
       "code": 279003533,
       "color": "black",
       "isFavourite" : false,
@@ -103,7 +103,7 @@
     {
       "name": "Drone Toys-Sky S165",
       "price": 2861,
-      "srs": "https://content.rozetka.com.ua/goods/images/big/119596861.jpg",
+      "srs": "/images/11.jpg",
       "code": 279099599,
       "color": "black",
       "isFavourite" : false,
@@ -113,7 +113,7 @@
     {
       "name": "Drone DJI Mini 2",
       "price": 15990,
-      "srs": "https://content1.rozetka.com.ua/goods/images/big/262336446.jpg",
+      "srs": "/images/12.jpg",
       "code": 278569599,
       "color": "black",
       "isFavourite" : false,
@@ -123,7 +123,7 @@
     {
       "name": "Drone Visuo Zen Blitz",
       "price": 6999,
-      "srs": "https://content.rozetka.com.ua/goods/images/big/16881271.jpg",
+      "srs": "/images/13.jpg",
       "code": 312569599,
       "color": "black",
       "isFavourite" : false,
@@ -133,7 +133,7 @@
     {
       "name": "Drone RC KF107 - 4K, 5G",
       "price": 5295,
-      "srs": "https://content1.rozetka.com.ua/goods/images/big/7898475.jpg",
+      "srs": "/images/14.jpg",
       "code": 356989599,
       "color": "black",
       "isFavourite" : false,
@@ -143,7 +143,7 @@
     {
       "name": "Drone DJI FPV",
       "price": 34799,
-      "srs": "https://content.rozetka.com.ua/goods/images/big/261100800.jpg",
+      "srs": "/images/15.jpg",
       "code": 356000599,
       "color": "grey",
       "isFavourite" : false,

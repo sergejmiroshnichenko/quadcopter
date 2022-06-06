@@ -4,7 +4,7 @@ import {useState, useEffect} from "react";
 
 
 
-const ScrollToUpButton = () => {
+const ScrollToUp = () => {
 
     const [scrollToUp, setScrollToUp] = useState(false);
 
@@ -42,4 +42,4 @@ const ScrollToUpButton = () => {
     )
 }
 
-export default ScrollToUpButton;
+export default ScrollToUp;

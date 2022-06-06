@@ -9,8 +9,8 @@ import PropTypes from "prop-types";
 
 const Header = ({ data }) => {
 
-    const filter = data.filter((item) => item.isinCart === true);
-    const favourite = data.filter((item) => item.isFavourite === true);
+    const filter = data.filter(item => item.isinCart);
+    const favourite = data.filter(item => item.isFavourite);
     let sum = '';
     sum += favourite.length;
     let totalCount = data.reduce((acc, item) => (acc += item.count, acc), 0)

@@ -2,8 +2,10 @@ import styles from './App.module.scss';
 import React, { useState, useEffect } from "react";
 import Header from '../Header/Header';
 import { BrowserRouter } from "react-router-dom";
-import Routers from '../../Routers/Routers';
-import ScrollToUpButton from "../ScrollToUp/ScrollToUpButton";
+import AppRoutes from '../../Routers/AppRoutes';
+import ScrollToUp from "../ScrollToUp/ScrollToUp";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
+
 
 
 
@@ -29,9 +31,10 @@ const App = () => {
     return (
         <BrowserRouter>
             <div className={styles.App}>
-                <ScrollToUpButton/>
+                <ScrollToTop/>
+                <ScrollToUp/>
                 <Header data={quadcopter} />
-                <Routers data={quadcopter} setQuadcopter={setQuadcopter} />
+                <AppRoutes data={quadcopter} setQuadcopter={setQuadcopter} />
             </div>
         </BrowserRouter>
     );
