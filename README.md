@@ -1,5 +1,7 @@
 https://7-sergejmiroshnichenko.vercel.app/
 
+### `npm start`
+
 ***Project stack and tools:***
 
  - React, 
