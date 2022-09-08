@@ -8,4 +8,4 @@
  - Git, 
  - adaptive layout
 
-https://react-quadcopter-394v.vercel.app/
+https://7-sergejmiroshnichenko.vercel.app/
