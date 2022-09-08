@@ -1,21 +1,47 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import FavouritePages from '../pages/FavouritePages/FavouritePages';
 import CartPages from '../pages/CartPages/CartPages';
 import HomePages from '../pages/HomePages/HomePages'
 import PropTypes from "prop-types";
 
 
+const AppRoutes = ({data, setQuadcopter}) => {
 
-const AppRoutes = ({ data, setQuadcopter }) => {
+    // const [cartItem, setCartItem] = useState([]);
 
     const addToCart = (name, price) => {
+
+        // const newState = [...cartItem];
+        // // let addCartItem = [...newState, {name, price, count: 1}];
+        // console.log(addCartItem)
+        // setCartItem(addCartItem)
+        // const index = newState.findIndex(item => item.name === name);
+        // console.log(index)
+        // if (index === -1) {
+        //     let addCartItem = [...newState, {name, price, count: 1}];
+        //     console.log(newState[index].count += 1);
+        // } else {
+        //
+        // }
+
+
+        // if (index === -1) {
+        //     console.log([...newState, {name, price, count: 1}]);
+        // } else {
+        //     addCartItem[index].count += 1;
+        //
+        //     console.log(newState);
+        // }
+
+
         setQuadcopter((prev) => {
             const index = prev.findIndex(item => item.name === name);
             if (index === -1) {
                 return [...prev, { name, price, count: 1 }]
             } else {
-                const newState = [...prev]
+                const newState = [...prev];
+                console.log(newState)
                 newState[index].count += 1;
                 newState[index].isinCart = true;
                 return newState;
@@ -27,7 +53,7 @@ const AppRoutes = ({ data, setQuadcopter }) => {
         setQuadcopter((prev) => {
             const index = prev.findIndex(item => item.name === name);
             const newState = [...prev];
-            newState[index] = { ...newState[index], isFavourite: newState[index].isFavourite !== true };
+            newState[index] = {...newState[index], isFavourite: newState[index].isFavourite !== true};
             return newState;
         })
     }
@@ -36,15 +62,16 @@ const AppRoutes = ({ data, setQuadcopter }) => {
     return (
         <Routes>
             <Route path="/"
-                element={<HomePages addToCart={addToCart}  data={data}  toFavourite={toFavourite} />}
+                   element={<HomePages addToCart={addToCart} data={data} toFavourite={toFavourite}/>}
             />
 
             <Route path="/favourite"
-                element={<FavouritePages addToCart={addToCart}  toFavourite={toFavourite}  data={data.filter((item) => item.isFavourite)} />}
+                   element={<FavouritePages addToCart={addToCart} toFavourite={toFavourite}
+                                            data={data.filter(item => item.isFavourite)}/>}
             />
 
             <Route path="/cart"
-                element={<CartPages data={data.filter((item) => item.isinCart)} setQuadcopter={setQuadcopter} />}
+                   element={<CartPages data={data.filter(item => item.isinCart)} setQuadcopter={setQuadcopter}/>}
             />
         </Routes>
     )
@@ -58,7 +85,8 @@ AppRoutes.propTypes = {
 
 AppRoutes.defaultProps = {
     data: [],
-    setQuadcopter: () => { },
+    setQuadcopter: () => {
+    },
 }
 
 

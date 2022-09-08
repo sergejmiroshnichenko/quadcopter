@@ -31,10 +31,9 @@ const Modal = ({ closeModal, addToCart, name, price, text, deleteCartItem }) => 
                     <Button text='Ok'  className={styles.btnSuccess} type='button' onClick={() => {
                         closeModal();
                         addToCart(name, price);
-                        {deleteCartItem && deleteCartItem(name)}
+                        deleteCartItem && deleteCartItem(name)
                     }}
                     />
-
                     <Button text='Cancel' className={styles.btnDanger} type='button'  onClick={closeModal} />
                 </div>
             </div>

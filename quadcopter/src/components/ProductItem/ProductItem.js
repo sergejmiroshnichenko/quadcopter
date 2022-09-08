@@ -11,7 +11,6 @@ import PropTypes from 'prop-types';
 
 
 
-
 const ProductItem = ({ name, price, srs, code, color, addToCart, toFavourite, isFavourite }) => {
 
     const [modal, setModal] = useState(false);

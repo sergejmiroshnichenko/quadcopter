@@ -6,7 +6,7 @@ const CartPages = ({ data, setQuadcopter }) => {
 
     return (
         <section>
-            <Cart data={data} setQuadcopter={setQuadcopter} />
+            <Cart data={data} setQuadcopter={setQuadcopter}  />
         </section>
     )
 };

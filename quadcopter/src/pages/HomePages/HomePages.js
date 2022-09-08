@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 
 
-
 const HomePages = ({ data, addToCart, toFavourite }) => {
     return (
         <section>

@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 100px 0 15px;
+    padding: 30px 0 15px;
     gap: 30px;
 }
 
@@ -19,8 +19,7 @@ li{
 
 @media (min-width: 320px) and (max-width: 480px) {
     .wrapper{
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0 10px;
         display: block;
     }
 

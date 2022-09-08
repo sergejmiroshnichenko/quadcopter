@@ -7,11 +7,11 @@ import React from 'react';
 const Products = ({data, addToCart, toFavourite}) => {
 
     return (
-        <div>
-            <ul className={styles.wrapper}>
-                {data && data.map((item, index) => <li key={index}><ProductItem {...item} addToCart={addToCart} toFavourite={toFavourite}/></li>)}
-            </ul>
-        </div>
+        <ul className={styles.wrapper}>
+            {data && data.map((item, index) => <li key={index}><ProductItem {...item}
+                                                                            addToCart={addToCart}
+                                                                            toFavourite={toFavourite}/></li>)}
+        </ul>
     )
 };
 

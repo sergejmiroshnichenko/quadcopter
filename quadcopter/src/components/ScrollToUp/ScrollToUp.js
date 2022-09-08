@@ -26,7 +26,7 @@ const ScrollToUp = () => {
     }
 
     return(
-        <div>
+        <>
             {scrollToUp && <ScrollUpIcon style = {{
                 position: 'fixed',
                 bottom: '50px',
@@ -38,7 +38,7 @@ const ScrollToUp = () => {
             }} onClick={scrollUp}>
                 </ScrollUpIcon>
             }
-        </div>
+        </>
     )
 }
 
