@@ -1,3 +1,5 @@
+https://7-sergejmiroshnichenko.vercel.app/
+
 ***Project stack and tools:***
 
  - React, 
@@ -8,4 +10,4 @@
  - Git, 
  - adaptive layout
 
-https://7-sergejmiroshnichenko.vercel.app/
+
