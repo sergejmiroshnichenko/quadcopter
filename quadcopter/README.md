@@ -1,6 +1,6 @@
 ### `npm start`
 
-https://7-sergejmiroshnichenko.vercel.app/
+https://q-sergejmiroshnichenko.vercel.app/
 
 ***Project stack and tools:***
 
