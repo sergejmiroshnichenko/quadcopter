@@ -1,4 +1,4 @@
-https://7-sergejmiroshnichenko.vercel.app/
+https://q-sergejmiroshnichenko.vercel.app/
 
 ### `npm start`
 
