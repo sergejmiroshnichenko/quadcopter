@@ -12,4 +12,3 @@ https://7-sergejmiroshnichenko.vercel.app/
  - Git, 
  - adaptive layout
 
-https://7-sergejmiroshnichenko.vercel.app/
