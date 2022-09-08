@@ -6,7 +6,7 @@ import HomePages from '../pages/HomePages/HomePages'
 import PropTypes from "prop-types";
 
 
-const AppRoutes = ({data, setQuadcopter}) => {
+const AppRoutes = ({data, setQuadcopter, onFilterSelect, filter}) => {
 
     // const [cartItem, setCartItem] = useState([]);
 
@@ -62,7 +62,11 @@ const AppRoutes = ({data, setQuadcopter}) => {
     return (
         <Routes>
             <Route path="/"
-                   element={<HomePages addToCart={addToCart} data={data} toFavourite={toFavourite}/>}
+                   element={<HomePages addToCart={addToCart}
+                                       data={data}
+                                       toFavourite={toFavourite}
+                                       onFilterSelect={onFilterSelect}
+                                       filter={filter}/>}
             />
 
             <Route path="/favourite"

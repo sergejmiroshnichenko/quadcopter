@@ -8,7 +8,7 @@ import React from "react";
 
 const FavouritePages = ({ data, toFavourite, addToCart }) => {
     return (
-        <div>
+        <div className={styles.favorNav}>
             <Products data={data} toFavourite={toFavourite} addToCart={addToCart} />
             <p className={styles.favor}> {data.length === 0 && <Favor />} </p>
         </div>

@@ -4,7 +4,6 @@ import Header from '../Header/Header';
 import AppRoutes from '../../Routers/AppRoutes';
 import ScrollToUp from "../ScrollToUp/ScrollToUp";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
-import ProductsFilter from "../ProductsFilter/ProductsFilter"
 import styles from './App.module.scss';
 
 
@@ -56,8 +55,10 @@ const App = () => {
                 <ScrollToTop/>
                 <ScrollToUp/>
                 <Header data={visibleData}/>
-                <ProductsFilter filter={filter} onFilterSelect={onFilterSelect}/>
-                <AppRoutes data={visibleData} setQuadcopter={setQuadcopter}/>
+                <AppRoutes data={visibleData}
+                           setQuadcopter={setQuadcopter}
+                           filter={filter}
+                           onFilterSelect={onFilterSelect}/>
             </div>
         </BrowserRouter>
     );

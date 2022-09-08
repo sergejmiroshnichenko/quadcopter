@@ -16,6 +16,10 @@ li{
     width: 350px;
 }
 
+.favorNav{
+    padding-top: 70px;
+}
+
 
 @media (min-width: 320px) and (max-width: 480px) {
     .wrapper{
@@ -31,5 +35,9 @@ li{
         margin-left: -10px;
         padding-right: 10px;
         width: 350px;
+    }
+
+    .favorNav{
+        padding-top: 100px;
     }
 }

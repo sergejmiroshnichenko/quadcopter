@@ -38,3 +38,9 @@
   23px 0 20px -23px rgba(0, 0, 0, .8),
   0 0 40px rgba(0, 0, 0, .1) inset;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .btn-group {
+    padding-bottom: 30px;
+  }
+}

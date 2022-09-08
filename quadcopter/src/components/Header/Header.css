@@ -52,19 +52,20 @@ ul li:hover a {
         padding: 0 10px;
     }
 
-    li {
-        font-size: 22px;
+    .navLink {
+        font-size: 26px;
     }
 
     .cartNumber {
         width: 19px;
         height: 19px;
+        margin-right: 10px;
     }
 
     .starNumber {
         width: 19px;
         height: 19px;
-        margin-right: 14px;
+        margin-right: 10px;
     }
 }
 
